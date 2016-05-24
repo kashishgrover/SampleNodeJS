@@ -1,0 +1,8 @@
+{
+  "name": "SampleNodeJS",
+  "version": "0.0.0",
+  "description": "sample node project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+}
