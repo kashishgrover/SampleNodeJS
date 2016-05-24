@@ -1,2 +1,1 @@
-# SamplePythonPrimes
 # SampleNodeJS
