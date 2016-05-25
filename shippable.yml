@@ -9,15 +9,16 @@ install:
 
 #for docker
 build:
-pre_ci:
-- docker build -t kashishgrover/node-web-app-1:latest .
+  pre_ci:
+    - docker build -t kashishgrover/node-web-app-1:latest .
 
-pre_ci_boot:
-image_name: kashishgrover/node-web-app-1
-image_tag: latest
-pull: false
-# options: 
+  pre_ci_boot:
+    image_name: kashishgrover/node-web-app-1
+    image_tag: latest
+    pull: false
+  # options: 
 
-ci:	
-#Where bulk of all the build commands will be there
-#Default commands for a language will be executed if this is empty
+  ci:
+    - echo "hello"
+  #Where bulk of all the build commands will be there
+  #Default commands for a language will be executed if this is empty
