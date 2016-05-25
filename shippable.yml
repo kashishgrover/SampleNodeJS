@@ -7,16 +7,17 @@ install:
   - source ~/.nvm/nvm.sh && nvm install 0.12
   - node --version
 
-build:  #for docker
-	pre_ci:
-		- docker build -t kashishgrover/node-web-app-1:latest
-	
-	pre_ci_boot:
-		image_name: node-web-app-1
-		image_tag: latest
-		pull: false
-		# options: 
-		
-	ci:	
-	#Where bulk of all the build commands will be there
-	#Default commands for a language will be executed if this is empty
+#for docker
+build:
+pre_ci:
+- docker build -t kashishgrover/node-web-app-1:latest
+
+pre_ci_boot:
+image_name: node-web-app-1
+image_tag: latest
+pull: false
+# options: 
+
+ci:	
+#Where bulk of all the build commands will be there
+#Default commands for a language will be executed if this is empty
