@@ -10,7 +10,7 @@ install:
 #for docker
 build:
 pre_ci:
-- docker build -t kashishgrover/node-web-app-1:latest
+- docker build -t kashishgrover/node-web-app-1:latest .
 
 pre_ci_boot:
 image_name: kashishgrover/node-web-app-1
