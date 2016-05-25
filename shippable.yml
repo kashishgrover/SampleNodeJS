@@ -8,15 +8,15 @@ install:
   - node --version
 
 build:  #for docker
- pre_ci:
-   - docker build -t kashishgrover/node-web-app-1:latest
- 
- pre_ci_boot:
-	image_name: node-web-app-1
-	image_tag: latest
-	pull: false
-	# options: 
+	pre_ci:
+		- docker build -t kashishgrover/node-web-app-1:latest
 	
- ci:	
-#Where bulk of all the build commands will be there
-#Default commands for a language will be executed if this is empty
+	pre_ci_boot:
+		image_name: node-web-app-1
+		image_tag: latest
+		pull: false
+		# options: 
+		
+	ci:	
+	#Where bulk of all the build commands will be there
+	#Default commands for a language will be executed if this is empty
