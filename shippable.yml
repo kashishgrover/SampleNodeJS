@@ -15,3 +15,16 @@ build:
     - echo "hello"
   #Where bulk of all the build commands will be there
   #Default commands for a language will be executed if this is empty
+  
+  post_ci:
+    #Commit the container only if you want all the artifacts from the CI step
+    - docker commit $SHIPPABLE_CONTAINER_NAME kashishgrover/node-web-app-1
+    - docker push kashishgrover/node-web-app-1:latest
+
+integrations:
+  hub:
+    - integrationName: Kashish-Docker
+      type: docker
+      branches:
+        only:
+          - master
